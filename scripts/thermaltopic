@@ -56,9 +56,9 @@ if __name__ == '__main__':
 			#Make the image grayscale
 			frame = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
 			#Rotate thermal image so that it's upright
-			rotatedimg = np.rot90(frame)
+			rotatedimg = np.rot90(frame, 2)
 			#convert the opencv img to ros img msg
-			msg = bridge.cv2_to_imgmsg(rotatedimg, encoding="8UC1")
+			msg = bridge.cv2_to_imgmsg(rotatedimg, encoding="mono8")
 			#publish the thermal img as ros img msg
 			pub.publish(msg)
 		rate.sleep
