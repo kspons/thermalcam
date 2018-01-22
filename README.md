@@ -5,7 +5,9 @@
 # Setup
 This package requires use of v4l2loopback and ThermAppCam 
 First, download and install v4l2loopback from https://github.com/umlaeute/v4l2loopback
+
 Second, download and build thermapp from https://github.com/Pidbip/ThermAppCam/tree/master/thermapp
+
 Make sure that thermapp is working and you can see a live feed from the Thermapp camera. To do this, use
 ```
 sudo modprobe videodev
